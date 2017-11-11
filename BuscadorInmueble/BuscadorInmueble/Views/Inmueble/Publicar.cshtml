@@ -1,0 +1,155 @@
+﻿@model BuscadorInmueble.Models.Inmueble
+@{
+    Layout = "~/Views/Compartir/Plantilla.cshtml";
+}
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript">
+    function fileCheck(obj) {
+        var fileExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+        if ($.inArray($(obj).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+            alert("Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed.");
+        }
+    }
+</script>
+
+<h2>Publicar</h2>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+<div class="testbox">
+    <h1><b>Formulario de Registro</b></h1>
+
+    <form action="~/inmueble/ProcesarInmueble" method="post">
+
+        <div class="fila">
+            <label>Distrito</label>
+            @Html.TextBoxFor(p => p.distrito)
+            <label>Direccion</label>
+            @Html.TextBoxFor(p => p.direccion)
+            <label>Precio</label>
+            @Html.TextBoxFor(p => p.precio)
+            <label>Descipcion</label>
+            @Html.TextAreaFor(p => p.descripcion)
+
+            @*<label>imagen</label>
+                <input name="archivo1" type="file" id="archivo1"><br />*@
+
+            <label>Url_Imagen</label>
+            @Html.TextBoxFor(p => p.Photo)
+
+        </div>
+
+
+        <button style="height:40px; width:120px;cursor:pointer;">Publicar</button>
+    </form>
+</div>
+
+<style type="text/css">
+    fieldset, img {
+        border: 0
+    }
+
+    ol, ul, li {
+        list-style: none
+    }
+
+    :focus {
+        outline: none
+    }
+
+    p {
+        font-size: 12px;
+        width: 150px;
+        display: inline-block;
+        margin-left: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 300;
+        color: #4c4c4c;
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    html {
+        background-color: #ffffff;
+    }
+
+    .testbox {
+        margin: 20px auto;
+        width: 750px;
+        height: 700px;
+        -webkit-border-radius: 8px/7px;
+        -moz-border-radius: 8px/7px;
+        border-radius: 8px/7px;
+        background-color: #ebebeb;
+        -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+        -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+        box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+        border: solid 1px #cbc9c9;
+    }
+
+    input[type=radio] {
+        visibility: hidden;
+    }
+
+    form {
+        margin: 0 70px;
+    }
+
+    input[type=radio]:checked + label:after {
+        opacity: 1;
+    }
+
+
+    input[type=text], input[type=password] {
+        width: 200px;
+        height: 39px;
+        -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+        -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
+        border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+        background-color: #fff;
+        -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+        -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+        box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+        border: solid 1px #cbc9c9;
+        margin-left: -5px;
+        margin-top: 13px;
+        padding-left: 10px;
+    }
+
+    input[type=password] {
+        margin-bottom: 25px;
+    }
+
+    .gender {
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+
+
+    button {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        padding: 6px 25px 0px 20px;
+        margin: 10px 8px 20px 0px;
+        float: right;
+        text-decoration: none;
+        width: 50px;
+        height: 27px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #3a57af;
+        -webkit-box-shadow: 0 3px rgba(58,87,175,.75);
+        -moz-box-shadow: 0 3px rgba(58,87,175,.75);
+        box-shadow: 0 3px rgba(58,87,175,.75);
+        position: relative;
+    }
+</style>
+ 

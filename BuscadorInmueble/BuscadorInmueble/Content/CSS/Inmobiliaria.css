@@ -1,0 +1,159 @@
+﻿
+header {
+    text-align: left;
+    margin-left: 10px;
+}
+
+body {
+    font-family: Arial;
+}
+
+
+nav {
+    background-color: #9A0909;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 6px 20px;
+    }
+
+    nav a {
+        color: white;
+    }
+
+h1 {
+    margin-left: 20px;
+}
+
+footer {
+    color: #ccc;
+    border-top: 3px solid #ccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: 110px;
+}
+
+h2 {
+    color: #9A0909;
+    margin-top: 5%;
+    /*background-color: #ccc;*/
+    padding: 10px;
+}
+
+p {
+    margin-left: 20px;
+}
+
+h3 {
+    padding: 10px;
+    color: #9A0909;
+}
+
+
+.producto {
+    margin-left: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.fila {
+    margin: 15px 0;
+}
+
+    .fila label {
+        float: left;
+        width: 200px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .fila textarea {
+        width: 400px;
+        height: 200px;
+    }
+
+    .fila button {
+        margin-left: 210px;
+        /*background-color: #ff0000;
+    padding: 6px;*/
+    }
+
+.abajo {
+    padding: 10px;
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.redes {
+    position: absolute;
+    right: 10px;
+    margin-: 100px;
+}
+
+.siguenos {
+    position: absolute;
+    right: 10px;
+}
+
+.contenedor-slider {
+    overflow: hidden;
+    margin: auto;
+    width: 85%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 0 0 10px #fff, 0 15px 50px;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+}
+
+.slider__section {
+    width: 100%;
+}
+
+.slider__img {
+    display: block;
+    width: 900px;
+    height: 400px;
+}
+
+.btn-prev, .btn-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+    .btn-prev:hover, .btn-next:hover {
+        background: white;
+    }
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}

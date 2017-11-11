@@ -1,0 +1,23 @@
+﻿@model BuscadorInmueble.Models.Inmueble
+
+@{
+    Layout = "~/Views/Compartir/Plantilla.cshtml";
+}
+<div class="container">
+   <center><h1>Departamento: @Model.direccion</h1></center>
+    <br />
+    <section>
+
+        <center> <label>Esta es una vista escogida por el usuario</label></center>
+        <br />
+        <br />
+        <center>  <div><img width="800" src="@Model.Photo" /></div></center>
+        <br />
+        <center>   <h3>Precio del Departamento <font size=" 6"> $ @Model.precio </font></h3></center>
+        <br />
+        <center>   <h3>Descripción: @Model.descripcion</h3></center>
+        <br />
+        <center> <span><b>Propietario:</b>  @Model.Usuario.nombre @Model.Usuario.apePat</span></center>
+        
+</section>
+</div>

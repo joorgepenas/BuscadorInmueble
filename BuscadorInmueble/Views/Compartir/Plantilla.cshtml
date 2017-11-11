@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PeñaCondeTingoLosta</title>
+    <link href="~/Content/CSS/Inmobiliaria.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="uft-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body background="~/Imagenes/fondo3.jpg">
+    <header>
+        <img height="200" src="~/Imagenes/inmobiliaria 2.jpg" />
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Usuario/Index">Inicio</a></li>
+            <li><a href="/Inmueble/ListadoDepas">Inmuebles</a></li>
+            <li><a href="/Inmueble/Publicar">Publicar</a></li>
+            <li><a href="/Usuario/Ingresar">Ingresar</a></li>
+            <li><a href="/Usuario/Registrar">Registrar</a></li>
+        </ul>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        &copy; 2017 PEÑACONDETINGOLOSTA, ALL RIGTHS RESERVERD
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

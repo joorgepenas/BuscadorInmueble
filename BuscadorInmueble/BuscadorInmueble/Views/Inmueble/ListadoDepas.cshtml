@@ -1,0 +1,31 @@
+﻿@model List<BuscadorInmueble.Models.Inmueble>
+
+@{
+    Layout = "~/Views/Compartir/Plantilla.cshtml";
+}
+
+<CENTER><h1 style="color: #4c4c4c"><B>INICIO - DEPARTAMENTOS DISPONIBLES ACTUALMENTE</B></h1></CENTER>
+
+@foreach (var de in Model)
+{
+    <div class="inmueble">
+        <h2>@de.distrito</h2>
+        <h4>@de.direccion</h4> 
+        <a href="~/inmueble/VerInfo/@de.id_inmueble">
+            <img width="350" height="250" src="@de.Photo">
+        </a>
+
+        <br />
+        <span>Precio del Departamento<strong> $ @de.precio</strong></span>
+    </div>
+}
+<style>
+    .inmueble {
+        float:left;      
+        margin: 0 0 25px 10px;
+    }
+
+</style>
+
+
+

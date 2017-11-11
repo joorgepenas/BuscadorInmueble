@@ -1,0 +1,22 @@
+﻿@model BuscadorInmueble.Models.Usuario
+@{
+       Layout = "~/Views/Compartir/Plantilla.cshtml";
+}
+
+<h2>Ingresar</h2>
+<form action="~/Usuario/IniciarSesion" method="post">
+    <div class="fila">
+        <label>Usuario</label>
+        @Html.TextBoxFor(p=>p.usuario1)
+        @*<input type="text" />*@
+        
+    </div>
+    <div class="fila">
+        <label>Password</label>
+        @Html.TextBoxFor(p => p.clave)
+        @*<input type="password" />*@
+    </div>
+    <div class="fila">
+        <button>Ingresar</button>
+    </div>
+</form>
